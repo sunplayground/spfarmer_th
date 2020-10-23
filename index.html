@@ -129,7 +129,7 @@
         async function GetCropInfo(skey,reroute) {
             var CROPObject={};
             CROPObject['event']='crop_info';
-            fetch('https://spfarmwater'+reroute+'-'+sub+'.herokuapp.com/' + 'https://games.shopee.tw/farm/api/friend/share_info/get?shareKey='+skey, {
+            fetch('https://spfarmwater'+reroute+'-'+sub+'.herokuapp.com/' + 'https://games.shopee.co.th/farm/api/friend/share_info/get?shareKey='+skey, {
                 body: null,
                 headers: {
                     'content-type': 'application/json'
@@ -150,7 +150,7 @@
         async function SendWater(skey,reroute) {
             GAObject['event'] = 'send_water';
             dataLayer.push(GAObject);
-            return await fetch('https://spfarmwater' + reroute + '-'+sub+'.herokuapp.com/' + 'https://games.shopee.tw/farm/api/friend/anonymous/help', {
+            return await fetch('https://spfarmwater' + reroute + '-'+sub+'.herokuapp.com/' + 'https://games.shopee.co.th/farm/api/friend/anonymous/help', {
                 body: '{"shareKey":"' + skey + '","channel":"CopyLink"}',
                 headers: {
                     'content-type': 'application/json'
